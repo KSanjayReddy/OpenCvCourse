@@ -1,20 +1,25 @@
 import cv2
 
 #img = cv2.imread("Images/week3/blob_detection.jpg", cv2.IMREAD_COLOR)
-img = cv2.imread("Images/week3/shapes.jpg", cv2.IMREAD_COLOR)
+#img = cv2.imread("Images/week3/shapes.jpg", cv2.IMREAD_COLOR)
+img = cv2.imread("Images/week3/test.png", cv2.IMREAD_COLOR)
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Setup SimpleBlobDetector parameters.
 params = cv2.SimpleBlobDetector_Params()
 
+params.filterByColor = 1
+params.blobColor = 255   # 0 for dark blobs 255 for bright blobs
+
+
 # Change thresholds
 params.minThreshold = 0    #The darkest
-params.maxThreshold = 250  # The brightest
+params.maxThreshold = 255  # The brightest
 
 # Filter by Area.
 params.filterByArea = True
-params.minArea = 1100
-params.maxArea = 4000
+params.minArea = 500
+params.maxArea = 400000
 
 # Filter by Circularity
 params.filterByCircularity = True
