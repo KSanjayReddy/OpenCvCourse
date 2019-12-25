@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Let us desaturate a image by changing its saturation
+# Let us desaturate a image by changing its saturation\
 
 img = cv2.imread("Images/week4/girl.jpg", cv2.IMREAD_COLOR)
 

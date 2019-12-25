@@ -8,6 +8,7 @@ print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT ))
 print(cap.get(cv2.CAP_PROP_FPS))
 print(cap.get(cv2.CAP_PROP_FOURCC))
+frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 
 while(cap.isOpened()):
     ret, img = cap.read()

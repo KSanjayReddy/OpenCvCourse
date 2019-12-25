@@ -1,7 +1,8 @@
 import cv2
 
 #Read an image and save original
-imagePath = "Images/week1/musk.jpg"
+#imagePath = "Images/week1/musk.jpg"
+imagePath = "Images/week3/sample.jpg"
 img = cv2.imread(imagePath, cv2.IMREAD_COLOR)
 cv2.namedWindow("ElonMusk",cv2.WINDOW_AUTOSIZE)
 orig = img.copy()
