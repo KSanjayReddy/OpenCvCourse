@@ -7,7 +7,7 @@ import numpy as np
 import time
 
 # Replace the URL with your own IPwebcam shot.jpg IP:port
-url='http://192.168.0.105:8080/shot.jpg'
+url='http://192.168.43.1:8080/shot.jpg'
 
 
 while True:

@@ -7,7 +7,7 @@ muskPath = "Images/week1/musk.jpg"
 img = cv2.imread(muskPath,cv2.IMREAD_COLOR)
 # 500, 600, 3
 #print("Shape of original image is {}".format(img.shape))
-cv2.line(img, (100,100), (300,450), (255,0,100), thickness= 10, lineType=cv2.LINE_AA)
+cv2.line(img, (100,100), (300,450), (255,0,100), thickness= 5, lineType=cv2.LINE_AA)
 
 cv2.circle(img, (280,150), 30, (0,0,255), thickness = -1, lineType= cv2.LINE_AA)
 
@@ -28,7 +28,7 @@ fontSize= cv2.getFontScaleFromHeight(fontStyle, 30, 2)
 cv2.putText(img, text, (100,450), fontStyle, fontSize, fontColor, fontThickness)
 testSize, baseLine = cv2.getTextSize(text, fontStyle, fontSize, fontThickness)
 
-print(testSize, baseLine) 
+print(testSize, baseLine)
 
 cv2.imshow("Hello", img)
 cv2.waitKey(0)

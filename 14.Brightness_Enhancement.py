@@ -14,6 +14,7 @@ img1 = np.ones((360,480,3), dtype='uint8') * brightness
 output  = cv2.add(img, img1)  # It will just add and clip the values which are out of range
 
 cv2.imshow("orig", img)
+cv2.imshow("brightness", img1)
 cv2.imshow("output", output)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

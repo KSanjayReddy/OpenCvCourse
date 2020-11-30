@@ -18,6 +18,12 @@ plt.subplot(1,5,5);plt.imshow(a);plt.title("Alpha Channel")
 
 new = cv2.merge((b,g,r,a))
 cv2.imshow("hello",new)
+
+cv2.imwrite("test_mask.jpg",a)
+cv2.imwrite("A.png",img)
+cv2.imwrite("B.png",new)
+
+
 plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()

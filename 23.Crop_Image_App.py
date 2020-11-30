@@ -2,7 +2,7 @@ import cv2
 
 #Read an image and save original
 #imagePath = "Images/week1/musk.jpg"
-imagePath = "Images/week3/sample.jpg"
+imagePath = "Images/week1/musk.jpg"
 img = cv2.imread(imagePath, cv2.IMREAD_COLOR)
 cv2.namedWindow("ElonMusk",cv2.WINDOW_AUTOSIZE)
 orig = img.copy()
@@ -22,6 +22,7 @@ k=0
 def cropImage(action,x,y, flags, userdata):
     global img,point1,point2,tmp,isCropStarted
     #LOGIC Goes Here
+    print(action)
     if(isCropStarted):
         if(tmp != (x,y)):
             img = orig.copy()
@@ -49,7 +50,7 @@ def cropImage(action,x,y, flags, userdata):
             roi = orig[y2:y1, x1:x2]
         cv2.imwrite("Cropped.jpg",roi)
         #Uncomment to see the cropped Image
-        #cv2.imshow("cropped",roi)
+        cv2.imshow("cropped",roi)
 
 #Setting the MouseCallback function to the window
 cv2.setMouseCallback("ElonMusk", cropImage)

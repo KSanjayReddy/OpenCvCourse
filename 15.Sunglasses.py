@@ -9,7 +9,7 @@ img = cv2.imread(muskPath, cv2.IMREAD_COLOR)
 glass = cv2.imread(glassPath, cv2.IMREAD_UNCHANGED)
 glass = cv2.resize(glass,(300,100), interpolation = cv2.INTER_CUBIC)
 
-'''
+
 #Using Arithmatic operations
 #####################################
 
@@ -30,14 +30,16 @@ fourth = cv2.addWeighted(second,0.7,third,0.3,0)
 
 final = cv2.add(first, fourth)
 img[150:250, 140:440] = final
+cv2.imshow("Glasses",glass[:,:,3])
 cv2.imshow("First",first)
 cv2.imshow("Second",second)
 cv2.imshow("third",third)
 cv2.imshow("fourth",fourth)
 cv2.imshow("final",img)
 ##################################
-'''
 
+
+'''
 #with binary operations
 #############################
 roi = img[150:250, 140:440]
@@ -54,7 +56,7 @@ cv2.imshow("first",first)
 cv2.imshow("second",second)
 cv2.imshow("final",final)
 #############################
-
+'''
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

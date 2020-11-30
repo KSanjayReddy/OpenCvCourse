@@ -34,3 +34,13 @@ for i in range(border, rows+border):
 dilatedImage = method2[border:border+rows,border:border+cols]
 dilatedImage = dilatedImage*255
 cv2.imwrite("method2_dilation.jpg",dilatedImage)
+
+
+plt.subplot(1,2,1)
+plt.imshow(img)
+plt.title("Orig")
+plt.subplot(1,2,2)
+plt.imshow(dilatedImage)
+plt.title("Dilated")
+
+plt.show()
