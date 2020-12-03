@@ -5,14 +5,13 @@ colorPath = "Images/week1/boy.jpg"
 img = cv2.imread(colorPath, cv2.IMREAD_COLOR)
 graycv = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-def convertBGRtoGray(image):
-    row,col, _ = image.shape
-    gray = np.zeros((row,col,1), dtype = 'float64')
-    b,g,r = cv2.split(image)
-    grayf = image[:,:,0]*0.1147 + image[:,:,1]*0.587  + image[:,:,2]* 0.299
-    gray = np.round(grayf)
-    gray = np.uint8(gray)
-    return gray
+def convertBGRtoGray(img):
+    img = np.float32(img) / 255.0
+    b,g,r = cv2.split(img)
+    new = np.zeros_like(b)
+    new = 0.299 * r + 0.587 * g + 0.114*b
+    new = np.uint8(np.round(new * 255.0))
+    return new
 
 gray = convertBGRtoGray(img)
 
