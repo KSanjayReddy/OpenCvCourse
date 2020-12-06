@@ -14,6 +14,7 @@ sigmaColor = 80
 # larger the value the more farther pixels will also have impact
 sigmaSpace = 80
 
+# Perfect for gaussian noise
 new = cv2.bilateralFilter(img, d, sigmaColor, sigmaSpace)
 
 out = np.hstack((img,new))
