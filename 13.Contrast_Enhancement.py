@@ -9,7 +9,7 @@ org = img.copy()
 img = np.float32(img)
 img = img / 255.0
 
-img = img * 1.9
+img = img * 1.3
 
 img = np.clip(img,0,1)
 
